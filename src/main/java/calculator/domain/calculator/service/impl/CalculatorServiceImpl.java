@@ -10,7 +10,7 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public int calculate(String input) {
-        if (input == null || input.isEmpty()) {
+        if (input == null || input.isBlank()) {
             return 0;
         }
 
@@ -23,7 +23,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     private int sumTokens(String[] tokens) {
         int sum = 0;
         for (String token : tokens) {
-            if (token.isEmpty()) {
+            if (token.isBlank()) {
                 continue;
             }
             if (!token.matches(NUMBER_REGEX)) {

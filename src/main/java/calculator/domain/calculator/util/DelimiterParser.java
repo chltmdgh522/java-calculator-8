@@ -23,7 +23,7 @@ public class DelimiterParser {
 
         while (matcher.find()) {
             String customDelimiter = matcher.group(1);
-            if (customDelimiter == null || customDelimiter.isEmpty()) {
+            if (customDelimiter == null || customDelimiter.isBlank()) {
                 throw new CalculatorException(ErrorCode.INVALID_CUSTOM_DELIMITER, "");
             }
             delimiters.add(Pattern.quote(customDelimiter));
