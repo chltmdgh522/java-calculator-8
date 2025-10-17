@@ -5,7 +5,11 @@ import calculator.domain.calculator.view.OutputView;
 import calculator.global.error.CalculatorException;
 
 public class ApplicationRunner {
-    private final CalculatorController controller = new CalculatorController();
+    private final CalculatorController controller;
+
+    public ApplicationRunner(CalculatorController controller) {
+        this.controller = controller;
+    }
 
     public void run() {
         try {
