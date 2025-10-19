@@ -1,5 +1,6 @@
 package calculator.domain.calculator.util;
 
+
 import calculator.global.error.CalculatorException;
 import calculator.global.error.ErrorCode;
 import java.util.ArrayList;
@@ -60,26 +61,5 @@ public class DelimiterParser {
         String delimiterRegex = String.join("|", delimiters);
 
         return new DelimiterResult(delimiterRegex, numbers);
-    }
-
-    /**
-     * 구분자 파싱 결과를 담는 내부 클래스
-     */
-    public static class DelimiterResult {
-        private final String delimiter; // 정규식 형태의 구분자
-        private final String numbers;   // 숫자 문자열
-
-        public DelimiterResult(String delimiter, String numbers) {
-            this.delimiter = delimiter;
-            this.numbers = numbers;
-        }
-
-        public String getDelimiter() {
-            return delimiter;
-        }
-
-        public String getNumbers() {
-            return numbers;
-        }
     }
 }

@@ -2,6 +2,7 @@ package calculator.domain.calculator.service.impl;
 
 import calculator.domain.calculator.service.CalculatorService;
 import calculator.domain.calculator.util.DelimiterParser;
+import calculator.domain.calculator.util.DelimiterResult;
 import calculator.global.error.CalculatorException;
 import calculator.global.error.ErrorCode;
 
@@ -27,7 +28,7 @@ public class CalculatorServiceImpl implements CalculatorService {
         }
 
         // 구분자 분석 및 문자열 분리
-        DelimiterParser.DelimiterResult delimiterResult = DelimiterParser.parse(input);
+        DelimiterResult delimiterResult = DelimiterParser.parse(input);
         String[] tokens = delimiterResult.getNumbers().split(delimiterResult.getDelimiter());
 
         // 토큰을 숫자로 변환하고 합산
