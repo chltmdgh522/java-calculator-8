@@ -10,7 +10,9 @@ import calculator.global.ApplicationRunner;
  */
 public class ApplicationFactory {
 
-    // 인스턴스화 방지
+    /**
+     * 인스턴스화 방지
+     */
     private ApplicationFactory() {
     }
 
